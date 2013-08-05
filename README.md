@@ -5,10 +5,12 @@ Simple gem for **pull backups**. Some of the code is based on the awesome [backu
 It was developed to suit our personal needs and backup strategy at [Diacode](http://diacode.com), where our **backup server uses SSH to dump MySQL databases and rysnc the desired folders**
 
 ## Installation
+The gem is not in RubyGems yet, therefore you'll need to clone the project and install the gem manually.
 
     $ git clone https://github.com/javiercr/keep_calm.git
     $ cd keep_calm
-    % rake install
+    $ bunddle
+    $ rake install
 
 ## Usage
 
