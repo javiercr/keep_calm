@@ -48,7 +48,7 @@ backup.perform!
 ```
 
 ## TODO:
-* Email notifiactions (WIP)
+* Email notifications (WIP)
 * PostgreSQL and MongoDB backups
 
 ## Contributing
