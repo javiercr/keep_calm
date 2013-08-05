@@ -38,10 +38,18 @@ backup.server do |s|
     f.key     = 'project1' # will be used for naming the backup folder
     f.path    = '/var/www/vhosts/project1/httpdocs/shared/uploads'
   end
+  s.folder do |f|
+    f.key     = 'project2'
+    f.path    = '/var/www/vhosts/project2/httpdocs/shared/uploads'
+  end
 end
 
 backup.perform!
 ```
+
+## TODO:
+* Email notifiactions (WIP)
+* PostgreSQL and MongoDB backups
 
 ## Contributing
 
