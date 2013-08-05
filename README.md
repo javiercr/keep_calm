@@ -22,10 +22,8 @@ backup.server do |s|
   s.host        = 'myhost.com'
 
   # Databases to backup in this server  
-  [
-    'database_name_1',
-    'database_name_2',
-  ].each do |db_name|
+  databases = ['database_name_1', 'database_name_2',]
+  databases.each do |db_name|
     s.database do |db|
       db.name = db_name
       db.user = 'db_user' 
