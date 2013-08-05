@@ -42,32 +42,12 @@ module KeepCalm
     end
 
 
+    ##
+    # Performs the backup of databases and folders
     def backup!
       @databases.each {|db| db.backup! }
       @folders.each {|f| f.backup! }
     end
-
-    ##
-    # Backups the specified folders using rsync
-    # def backup_folders
-    #   ssh =  "#{@user}@#{@host}"
-    #   @folders.each do |folder|
-    #     src = "#{ssh}:#{folder[:path]}"
-    #     dest = File.join(@storage_path, "folders", folder[:key])
-    #     FileUtils.mkdir_p dest
-    #     command = "rsync #{src} #{dest} -a"
-    #     log "Rsync #{folder[:path]}"
-    #     p command
-    #     system(command)
-    #   end
-
-    # rescue Exception => err
-    #   @exception = err
-
-    # ensure
-    #   log(@exception)
-    # end
-
 
 
     def storage_databases_path
