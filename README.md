@@ -2,7 +2,10 @@
 
 Simple gem for **pull backups**. Some of the code is based on the awesome [backup gem](https://github.com/meskyanichi/backup).
 
-It was developed to suit our personal needs and backup strategy at [Diacode](http://diacode.com), where our **backup server uses SSH to dump MySQL databases and rysnc the desired folders**
+It was developed to suit our personal needs and backup strategy at [Diacode](http://diacode.com), where our **backup server uses SSH to dump MySQL databases and rsync the desired folders**.
+
+With the approach the server that runs the app doesn't need to know anything about the backup process.
+
 
 ## Installation
 The gem is not in RubyGems yet, therefore you'll need to clone the project and install the gem manually.
@@ -12,9 +15,12 @@ The gem is not in RubyGems yet, therefore you'll need to clone the project and i
     $ bunddle
     $ rake install
 
+## Requierements
+* Your backup server (the one that runs the ruby backup script) needs to have SSH access to your app server. In other words, place the public key of the backup server into the `authorized_keys` file for the app server.
+
 ## Usage
 
-Create a simple ruby script like the one below:
+Create a simple backup ruby script like the one below:
 
 ```ruby
 require 'keep_calm'
