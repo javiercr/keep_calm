@@ -1,4 +1,5 @@
 # encoding: utf-8
+require 'fileutils'
 
 module KeepCalm
   class Backup
@@ -136,7 +137,6 @@ module KeepCalm
     ## 
     # Creates directories for the backup
     def create_paths
-      require "FileUtils"
       @storage_folders_path = File.join(@storage_path, "folders") # Not need date because we use rsync
       FileUtils.mkdir_p @storage_folders_path
 
