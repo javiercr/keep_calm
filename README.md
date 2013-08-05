@@ -6,7 +6,9 @@ It was developed to suit our personal needs and backup strategy at [Diacode](htt
 
 ## Installation
 
-    $ gem install keep_calm
+    $ git clone https://github.com/javiercr/keep_calm.git
+    $ cd keep_calm
+    % rake install
 
 ## Usage
 
