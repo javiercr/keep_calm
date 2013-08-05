@@ -1,24 +1,47 @@
 # StayCalm
 
-TODO: Write a gem description
+Simple gem for **pull backups**. Some of the code is based on the awesome [Backup gem](https://github.com/meskyanichi/backup).
+
+It was developed to suit our personal needs and backup strategy at [Diacode](http://diacode.com), where our **backup server uses SSH to dump MySQL databases and rysnc the desired folders**
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'stay_calm'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install stay_calm
 
 ## Usage
 
-TODO: Write usage instructions here
+Create a simple ruby script like the one below:
+
+```ruby
+require 'stay_calm'
+
+backup = StayCalm::Backup.new('/Users/javi/backups')
+
+backup.server do |s|
+  s.user        = 'myuser'
+  s.host        = 'myhost.com'
+
+  # Databases to backup in this server  
+  [
+    'database_name_1',
+    'database_name_2',
+  ].each do |db_name|
+    s.database do |db|
+      db.name = db_name
+      db.user = 'db_user' 
+      db.password = 'db_password' 
+    end
+  end
+
+  # Folders to backup in this server
+  s.folder do |f|
+    f.key     = 'project1' # will be used for naming the backup folder
+    f.path    = '/var/www/vhosts/project1/httpdocs/shared/uploads'
+  end
+end
+
+backup.perform!
+```
 
 ## Contributing
 
