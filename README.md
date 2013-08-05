@@ -16,7 +16,7 @@ The gem is not in RubyGems yet, therefore you'll need to clone the project and i
     $ rake install
 
 ## Requierements
-* Your backup server (the one that runs the ruby backup script) needs to have SSH access to your app server. In other words, place the public key of the backup server into the `authorized_keys` file for the app server.
+* Your backup server (the one that runs the ruby backup script) needs to have SSH access to your app server. In other words, place the public key of the backup server into the `authorized_keys` file in the app server.
 
 ## Usage
 
