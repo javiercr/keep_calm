@@ -1,4 +1,4 @@
-# StayCalm
+# KeepCalm
 
 Simple gem for **pull backups**. Some of the code is based on the awesome [backup gem](https://github.com/meskyanichi/backup).
 
@@ -6,16 +6,16 @@ It was developed to suit our personal needs and backup strategy at [Diacode](htt
 
 ## Installation
 
-    $ gem install stay_calm
+    $ gem install keep_calm
 
 ## Usage
 
 Create a simple ruby script like the one below:
 
 ```ruby
-require 'stay_calm'
+require 'keep_calm'
 
-backup = StayCalm::Backup.new('/Users/javi/backups')
+backup = KeepCalm::Backup.new('/Users/javi/backups')
 
 backup.server do |s|
   s.user        = 'myuser'

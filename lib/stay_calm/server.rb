@@ -1,4 +1,4 @@
-module StayCalm
+module KeepCalm
   class Server
     
     ## 

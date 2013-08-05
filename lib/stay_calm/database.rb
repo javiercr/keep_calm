@@ -1,4 +1,4 @@
-module StayCalm
+module KeepCalm
   class Database
 
     attr_accessor :name

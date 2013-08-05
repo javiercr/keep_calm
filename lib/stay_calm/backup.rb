@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-module StayCalm
+module KeepCalm
   class Backup
 
     # Array of configured Servers objects.

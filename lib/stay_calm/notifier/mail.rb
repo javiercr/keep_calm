@@ -2,7 +2,7 @@
 # Code borrowed from Backup gem
 require 'mail'
 
-module StayCalm
+module KeepCalm
   module Notifier
     class Mail < Base
 

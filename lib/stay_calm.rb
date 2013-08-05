@@ -1,12 +1,12 @@
-require "stay_calm/version"
+require "keep_calm/version"
 
-module StayCalm
+module KeepCalm
   ##
-  # StayCalms's internal paths
-  LIBRARY_PATH = File.join(File.dirname(__FILE__), 'stay_calm')
+  # KeepCalms's internal paths
+  LIBRARY_PATH = File.join(File.dirname(__FILE__), 'keep_calm')
   
   ##
-  # Require StayCalm base files
+  # Require KeepCalm base files
   %w{
     backup
     database

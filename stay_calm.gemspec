@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'stay_calm/version'
+require 'keep_calm/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "stay_calm"
-  spec.version       = StayCalm::VERSION
+  spec.name          = "keep_calm"
+  spec.version       = KeepCalm::VERSION
   spec.authors       = ["Javier Cuevas"]
   spec.email         = ["javi@diacode.com"]
   spec.description   = %q{A simple gem to perform pull backups}
