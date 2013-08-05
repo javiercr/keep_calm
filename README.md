@@ -1,6 +1,6 @@
 # StayCalm
 
-Simple gem for **pull backups**. Some of the code is based on the awesome [Backup gem](https://github.com/meskyanichi/backup).
+Simple gem for **pull backups**. Some of the code is based on the awesome [backup gem](https://github.com/meskyanichi/backup).
 
 It was developed to suit our personal needs and backup strategy at [Diacode](http://diacode.com), where our **backup server uses SSH to dump MySQL databases and rysnc the desired folders**
 
