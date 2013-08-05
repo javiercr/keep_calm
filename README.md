@@ -26,8 +26,8 @@ backup.server do |s|
   databases.each do |db_name|
     s.database do |db|
       db.name = db_name
-      db.user = 'db_user' 
-      db.password = 'db_password' 
+      db.user = 'my_db_user' 
+      db.password = 'my_db_password' 
     end
   end
 
